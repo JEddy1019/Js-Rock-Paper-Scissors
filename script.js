@@ -80,4 +80,17 @@ function round (CPU, player){
 
 }
 // console.log(round(CPU, player));
-console.log(round(getComputerChoice(), player));
+// console.log(round(getComputerChoice(), player));
+
+
+
+function game (){
+    for (let x = 0;x<5; x++){
+        let player = prompt('Choose between rock, paper and scissors.');
+        let count = x + 1;
+        console.log(`Round ${count}!`);
+        console.log(round(getComputerChoice(), player));
+    }
+    console.log('Game has finished!');
+}
+console.log(game());
