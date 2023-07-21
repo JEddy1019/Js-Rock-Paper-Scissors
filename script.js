@@ -21,11 +21,6 @@ function getComputerChoice(){
     }
 }
 
-
-
-// let player ='rock'; //testing variable
-// let CPU = 'paper';   //testing variable
-
 function round (player){
     let result;
     let CPU = getComputerChoice();
@@ -43,7 +38,6 @@ function round (player){
 
 }
 
-
 // function game (){
 //     for (let x = 0;x<5; x++){
 //         let player = prompt('Choose between rock, paper and scissors.');
@@ -55,18 +49,30 @@ function round (player){
 // }
 // console.log(game());
 
+const results = document.querySelector('.results');
+const runningScore = document.querySelector('.running-score');
+const winner = document.createElement('div');
+const div = document.createElement('div');
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 
+
 rock.addEventListener('click', e=>{
-    console.log(round('rock'))
+    div.textContent = `${round('rock')}`;
+    results.append(div);
 });
 paper.addEventListener('click', e=>{
-    console.log(round('paper'))
+    div.textContent = `${round('paper')}`;
+    results.append(div);
 });
 scissors.addEventListener('click', e=>{
-    console.log(round('scissors'))
+    div.textContent = `${round('scissors')}`;
+    results.append(div);
 });
+
+
+
+
 
 
